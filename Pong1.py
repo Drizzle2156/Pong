@@ -62,7 +62,6 @@ endmsg = turtle.Turtle()
 endmsg.color("gold")
 endmsg.left(90)
 endmsg.goto(0, -25)
-# Functions to move the paddles with arrow keys
 
 # 3rd turtle object
 secondpen = turtle.Turtle()
@@ -74,7 +73,7 @@ secondpen.penup()
 secondpen.goto(0, -260)
 secondpen.write("I'm at John Deere ISG!", font=("Trade Gothic", 40))
 
-
+# Functions to move the paddles with arrow keys
 def paddle_a_up():
     y = paddle_a.ycor()
     y += 20
@@ -114,7 +113,7 @@ while True:
 
     # how to move the ball
     ball.setx(ball.xcor() + ball.dx)
-    # .xcor is the current x coordinate. dx and dy need to be defined after creating ball object to avoid the attribute error
+    # .xcor is the current x coordinate. dx and dy need to be defined after creating a ball object to avoid the attribute error
     ball.sety(ball.ycor() + ball.dy)
 
     # border checking, done by comparing the ball's y coordinate.
@@ -125,7 +124,7 @@ while True:
         # plays the sound file, & gets rid of the delay
         os.system("afplay bounce.wav&")
 
-    if ball.ycor() < -290:  # if current ball y coordinate is less than -290. Remeber that the further down its more negative
+    if ball.ycor() < -290:  # if current ball y coordinate is less than -290. Remember that the further down the more negative
         ball.sety(-290)  # gets set back to -290
         ball.dy *= -1
         os.system("afplay bounce.wav&")
