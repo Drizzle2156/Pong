@@ -1,7 +1,7 @@
 # Simple Pong in Python3 for beginners
 # Part 1: Getting Started
 
-import turtle  # turtle is a built in module from the standard Python library
+import turtle  # turtle is a built-in module from the standard Python library
 import os  # provides functions for interacting with the operating system
 
 
@@ -11,21 +11,21 @@ wn.bgcolor("black")  # background color
 wn.setup(width=800, height=600)  # pixels
 wn.tracer(0)
 
-# keeping track of score
+# Keeping track of the score
 score_a = 0
 score_b = 0
 
 
 # Paddle A is the LEFT PADDLE,
 #  the width is vertical, length is horizontal default pixel size of objects in turtle is 20 vertical, 20 horizontal
-paddle_a = turtle.Turtle()  # create the paddle a object
+paddle_a = turtle.Turtle()  # create the paddle object
 paddle_a.speed(0)
 paddle_a.shape("square")
 paddle_a.color("red")
 paddle_a.shapesize(stretch_wid=5, stretch_len=1)
 # 100 = 20 pixels * stretch_wid and 20 = 20 pixels * stretch_len
 paddle_a.penup()
-paddle_a.goto(-350, 0)  # x, y corrdinates, WE SET IT TO -350
+paddle_a.goto(-350, 0)  # x, y coordinates, WE SET IT TO -350
 # Paddle B IS THE RIGHT PADDLE
 paddle_b = turtle.Turtle()
 paddle_b.speed(0)
@@ -47,17 +47,17 @@ ball.goto(0, 0)
 ball.dx = 1  # Horizontal speed, goes right
 ball.dy = 1  # Vertical speed, goes up
 
-# Pen -> this is a new turtle object, showing the scoring txt
+# Pen -> This is a new turtle object, showing the scoring txt
 pen = turtle.Turtle()
 pen.speed(0)
 pen.color("purple")
 pen.penup()  # turtle will not leave a trail as it moves
-pen.hideturtle()  # dont want to see, only the txt that it writes
-pen.goto(0, 260)  # x, y corrdinate
+pen.hideturtle()  # dont want to see the turtle, only the text that it writes
+pen.goto(0, 260)  # x, y coordinate
 pen.write("Player A: 0  Player B: 0", align="center",
           font=("Courier", 24, "normal"))
 
-# 2nd turtle object, just for win or loss messages
+# 2nd turtle object
 endmsg = turtle.Turtle()
 endmsg.color("gold")
 endmsg.left(90)
