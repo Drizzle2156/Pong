@@ -163,7 +163,7 @@ while True:
                   font=("Courier", 24, "normal"))
 
 
-# new testable scoring function
+# Unit testable scoring function (it is a work in progress)
 
 # Inside Pong1.py
 
